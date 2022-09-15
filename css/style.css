@@ -44,6 +44,7 @@
     height: 250px;
     width: 250px;
     background-color: lightgreen;
+    order: 3;
 }
 
 .productoO{

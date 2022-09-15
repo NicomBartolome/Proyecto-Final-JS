@@ -15,12 +15,17 @@ function producto(abono){
 
             document.body.append(producto)
             
+            let o = 0;
 
             for(let i = 0; i < data.length; i++){
                 if(data[i].id == abono){
                 }else{
+                    if(0 < 2){
+                        o++    
+                    }
                     let productoOp = document.createElement('div')
                     productoOp.className = "productoO"
+                    productoOp.style = `order:${o}`
                     /* let productoAdicional = document.createElement('div');
                     productoAdicional.className = "productoO" */
                     productoOp.innerHTML += `<h3>Otra opcion</h3>
@@ -28,11 +33,11 @@ function producto(abono){
                                             <h4> $ ${data[i].precio} </h4>`
 
                     producto.appendChild(productoOp)
-
+                    }
                 }
-            }
-        })
-}
+            })
+        }
+
 
 function calculador(){
 
