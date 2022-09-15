@@ -1,0 +1,61 @@
+
+.cuerpo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: auto;
+    height: auto;
+}
+
+.opciones{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.imgB{
+    width: 15%;
+    height: 15%;
+}
+
+.imgA{
+    width: 25%;
+    height: 50%;
+}
+
+#tarjetas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#productoE{
+    border: 2px;
+    border-style: solid;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    background-color: lightgreen;
+}
+
+.productoO{
+    border: 2px;
+    border-style: solid;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+}

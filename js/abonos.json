@@ -1,0 +1,8 @@
+[
+    {"Producto": "Abono 4 Mbps", "precio" : 1100, "id": 4},
+    {"Producto": "Abono 6 Mbps", "precio" : 1450, "id": 6},
+    {"Producto": "Abono 8 Mbps", "precio" : 1890, "id": 8},
+    {"Producto": "Abono 10 Mbps", "precio" : 2210, "id": 10},
+    {"Producto": "Abono 20 Mbps", "precio" : 3490, "id": 20}
+
+]
