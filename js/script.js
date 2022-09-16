@@ -49,7 +49,7 @@ function calculador(){
     Swal.fire({
         position: 'center',
         title: 'Gracias por elegirnos!',
-        icon: 'success',
+        icon: 'info',
         showConfirmButton: false,
         timer: 2000
     })
