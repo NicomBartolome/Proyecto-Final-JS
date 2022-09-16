@@ -1,49 +1,60 @@
 function producto(abono){
-    fetch('js/abonos.json')
-        .then(info => info.json())
-        .then((data) => {
-            const dato = data.find((S) => S.id == abono)           
-            console.log('El abono que mejor se adapta a tus necesidades es el abono de ' + dato.id + ' Mb - $'+ dato.precio + ' Final por mes')
+    setTimeout(()=>{
+        fetch('js/abonos.json')
+            .then(info => info.json())
+            .then((data) => {
+                const dato = data.find((S) => S.id == abono)           
+                console.log('El abono que mejor se adapta a tus necesidades es el abono de ' + dato.id + ' Mb - $'+ dato.precio + ' Final por mes')
 
-            let producto = document.createElement('div')
-            producto.id = "tarjetas"
-            producto.innerHTML = `<div id="productoE">
-                                        <h3>Nuestra recomendacion</h3>
-                                        <h2> ${dato.id} Mbps</h2>
-                                        <h4> $ ${dato.precio} </h4>
-                                    </div>`
+                let producto = document.createElement('div')
+                producto.id = "tarjetas"
+                producto.innerHTML = `<div id="productoE">
+                                            <h3>Nuestra recomendacion</h3>
+                                            <h2> ${dato.id} Mbps</h2>
+                                            <h4> $ ${dato.precio} </h4>
+                                        </div>`
 
-            document.body.append(producto)
-            
-            let o = 0;
+                document.body.append(producto)
+                
+                let o = 0;
 
-            for(let i = 0; i < data.length; i++){
-                if(data[i].id == abono){
-                }else{
-                    if(0 < 2){
-                        o++    
-                    }
-                    let productoOp = document.createElement('div')
-                    productoOp.className = "productoO"
-                    productoOp.style = `order:${o}`
-                    /* let productoAdicional = document.createElement('div');
-                    productoAdicional.className = "productoO" */
-                    productoOp.innerHTML += `<h3>Otra opcion</h3>
-                                            <h2> ${data[i].id} Mbps</h2>
-                                            <h4> $ ${data[i].precio} </h4>`
+                for(let i = 0; i < data.length; i++){
+                    if(data[i].id == abono){
+                    }else{
+                        if(0 < 2){
+                            o++    
+                        }
+                        let productoOp = document.createElement('div')
+                        productoOp.className = "productoO"
+                        productoOp.style = `order:${o}`
+                        productoOp.innerHTML += `<h3>Otra opcion</h3>
+                                                <h2> ${data[i].id} Mbps</h2>
+                                                <h4> $ ${data[i].precio} </h4>`
 
-                    producto.appendChild(productoOp)
+                        producto.appendChild(productoOp)
                     }
                 }
             })
-        }
+    }, 2100)
+}
 
 
 function calculador(){
 
+    if(document.getElementById('tarjetas')){
+        let ofertas = document.getElementById('tarjetas')
+        ofertas.remove()        
+    }
+
+    Swal.fire({
+        position: 'center',
+        title: 'Gracias por elegirnos!',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 2000
+    })
+
     const datosCliente = {
-        /* nombre: document.getElementById('nombre').value,
-        apellido: document.getElementById('apellido').value, */
         computadoras: document.getElementById('pcs').value,
         tablets: document.getElementById('Tablets').value,
         telefonos: document.getElementById('Telefonos').value,
