@@ -5,89 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1, initial-scale=1.0">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Calculador de rentabilidad</title>   
+    <title>Tu plan ideal! - RDC Internet y TV</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">   
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Su abono ideal</h1>
-    <h3>Con este programa se podra calcular que abono se adecua mejor a sus necesidades</h3>
-    <br>
-    <h3>Por favor indiquenos los siguientes datos para poder asistirlo: </h3>
-    <h4>Indiquenos la cantidad de dispositivo que usa habitualmente en su domicilio </h4>
+    <div class="titulo">
+        <h1>¿Estas buscando el plan ideal para vos?</h1>
+    </div>
+    <div class="subtitulo">
+        <h2>Te ayudamos!</h2>
+        <h2>Indicanos cuantos dispositivos tenés: </h2>
+    </div>
     <form id="datos">
         <div class="cuerpo">
             <div class="opciones">
                 <h3>Computadoras</h3>
-            <div><img src="img/pc1.png" alt="" class="imgA"></div> <p>Cantidad: <select name="" id="pcs">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+            <div><img src="img/pc1.png" alt="" class="imgA"></div> <p>Cantidad: <input type="number" name="" id="pcs" min="0" value="0">
             </p>
             </div>
             <div class="opciones">
                 <h3>Tablets</h3>
-            <div><img src="img/tablet.png" class="imgB" alt=""></div><p>Cantidad: <select name="" id="Tablets">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+            <div><img src="img/tablet.png" class="imgB" alt=""></div><p>Cantidad: <input type="number" name="" id="Tablets" min="0" value="0">
             </p>
             </div>
             <div class="opciones">
                 <h3>Telefonos</h3>
-            <div><img src="img/cel.png" class="imgB" alt=""></div><p>Telefonos: <select name="" id="Telefonos">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+            <div><img src="img/cel.png" class="imgB" alt=""></div><p>Telefonos: <input type="number" name="" id="Telefonos" min="0" value="0">
             </p>
             </div>
             <div class="opciones">
                 <h3>TVs SMART</h3>
-            <div><img src="img/tv.png" alt="" class="imgA"></div><p>TVs SMART: <select name="" id="tv">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+            <div><img src="img/tv.png" alt="" class="imgC"></div><p>TVs SMART: <input type="number" name="" id="tv" min="0" value="0">
             </p>
             </div>
         
         </div>
     </form>
-    <input type="button" id="Calcular" value="CALCULAR">
+    <div class="boton"><input type="button" id="Calcular" value="CALCULAR"></div>
     <script src="js/script.js"></script>
 </body>
 </html>

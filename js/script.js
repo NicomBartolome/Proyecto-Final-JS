@@ -1,17 +1,19 @@
-function producto(abono){
-    setTimeout(()=>{
+const producto = (abono) => {
+    setTimeout(() => {
+
         fetch('js/abonos.json')
             .then(info => info.json())
             .then((data) => {
                 const dato = data.find((S) => S.id == abono)           
-                console.log('El abono que mejor se adapta a tus necesidades es el abono de ' + dato.id + ' Mb - $'+ dato.precio + ' Final por mes')
 
                 let producto = document.createElement('div')
                 producto.id = "tarjetas"
                 producto.innerHTML = `<div id="productoE">
-                                            <h3>Nuestra recomendacion</h3>
+                                            <div class="recomendacion"><p>Te recomendamos</p></div>
                                             <h2> ${dato.id} Mbps</h2>
-                                            <h4> $ ${dato.precio} </h4>
+                                            <h2> $ ${dato.precio} </h2>
+                                            <button class="boton-contratar" onclick="location.href='https://api.whatsapp.com/send/?phone=5493582448431&text=Hola!+estoy+interesado+en+su+servico+de+${dato.id}+Mb'">
+                                            <img src="img/wpp5.png" id="wpp-boton"><p> CONTRATALO YA!</p></button>
                                         </div>`
 
                 document.body.append(producto)
@@ -24,22 +26,23 @@ function producto(abono){
                         if(0 < 2){
                             o++    
                         }
+
                         let productoOp = document.createElement('div')
                         productoOp.className = "productoO"
                         productoOp.style = `order:${o}`
-                        productoOp.innerHTML += `<h3>Otra opcion</h3>
-                                                <h2> ${data[i].id} Mbps</h2>
-                                                <h4> $ ${data[i].precio} </h4>`
+                        productoOp.innerHTML += `<h2> ${data[i].id} Mbps</h2>
+                                                <h2> $ ${data[i].precio} </h2>
+                                                <button class="boton-contratar" onclick="location.href='https://api.whatsapp.com/send/?phone=5493582448431&text=Hola!+estoy+interesado+en+su+servico+de+${data[i].id}+Mb'">
+                                                <img src="img/wpp5.png" id="wpp-boton"> CONTRATALO YA!</button>`
 
                         producto.appendChild(productoOp)
                     }
                 }
             })
-    }, 2100)
+    }, 1750)
 }
 
-
-function calculador(){
+const calculador = () => {
 
     if(document.getElementById('tarjetas')){
         let ofertas = document.getElementById('tarjetas')
@@ -48,10 +51,10 @@ function calculador(){
 
     Swal.fire({
         position: 'center',
-        title: 'Gracias por elegirnos!',
-        icon: 'info',
+        title: 'Encontramos el plan perfecto para vos!',
+        icon: 'success',
         showConfirmButton: false,
-        timer: 2000
+        timer: 1750
     })
 
     const datosCliente = {
@@ -63,6 +66,7 @@ function calculador(){
     }
 
     ConsumoCTE = ((datosCliente.computadoras*3)+(datosCliente.tablets*2)+(datosCliente.telefonos*2)+(datosCliente.tvs*3))
+
     if(ConsumoCTE == 0 || ConsumoCTE <= 4){
         producto('4')        
     }else if(ConsumoCTE <= 6 && ConsumoCTE > 4){

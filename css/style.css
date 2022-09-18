@@ -1,3 +1,23 @@
+body{
+    background: radial-gradient(circle, #242F9B 50% ,#1C3879, #231955 );
+}
+
+.titulo{
+    color: #F9F5EB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Overpass', sans-serif;
+}
+
+.subtitulo{
+    color: #F9F5EB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+}
 
 .cuerpo{
     display: grid;
@@ -14,7 +34,28 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: whitesmoke;
+    border-radius: 10000px;
+    margin: 10px;
+    font-family: 'Overpass', sans-serif;
 }
+
+#pcs{
+    width: 35px;
+}
+
+#Tablets{
+    width: 35px;
+}
+
+#Telefonos{
+    width: 35px;
+}
+
+#tv{
+    width: 35px;
+}
+
 
 .imgB{
     width: 15%;
@@ -26,6 +67,11 @@
     height: 50%;
 }
 
+.imgC{
+    width: 50%;
+    height: 15%;
+}
+
 #tarjetas{
     display: flex;
     justify-content: center;
@@ -33,30 +79,104 @@
 }
 
 #productoE{
-    border: 2px;
+    border: 5px;
     border-style: solid;
+    border-radius: 45px;
+    border-color: fdf9ef;
     height: auto;
     margin: 10px;
     padding: 5px;
+    color: #fdf9ef;
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     height: 250px;
     width: 250px;
-    background-color: lightgreen;
     order: 3;
+    font-family: 'Overpass', sans-serif;
+}
+
+.recomendacion{
+    background-color: #fdf9ef;
+    color: orange;
+    font-family: 'Overpass', sans-serif;
+    border: 3px;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    width: 200px;
+    height: 50px;   
 }
 
 .productoO{
-    border: 2px;
+    border: 5px;
     border-style: solid;
+    border-color: #F9F5EB;
+    border-radius: 45px;
+    color: #F9F5EB;
     height: auto;
     margin: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     height: 200px;
     width: 200px;
-    background-color: lightgray;
+    font-family: 'Overpass', sans-serif;
+}
+
+.boton-contratar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 30px;
+    background-color: rgb(148, 219, 40);
+    margin: 5px;
+    padding: 2px;
+    border-radius: 15px;
+    font-family: 'Overpass', sans-serif;
+}
+
+
+.boton-contratar:hover{
+    background-color: green;
+}
+
+#wpp-boton{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.boton input{
+    width: 15%;
+    height: 30px;
+    background-color: #242F9B;
+    border: 2px;
+    border-style: solid;
+    border-color: #F9F5EB;
+    border-radius: 200px;
+    color: #F9F5EB;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+}
+
+.boton input:hover{
+    background-color: #F9F5EB;
+    color: black;
 }
